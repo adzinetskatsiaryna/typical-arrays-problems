@@ -1,12 +1,26 @@
 
 exports.min = function min (array) {
-  return 0;
+    if(!Array.isArray(array) || array.length === undefined || array[0] === undefined) {
+        return 0;
+    }
+    return array.reduce(function (a, b) {
+        return ( a < b ? a : b );
+      });
 }
 
 exports.max = function max (array) {
-  return 0;
+    if(!Array.isArray(array) || array.length === undefined || array[0] === undefined) {
+        return 0;
+    }
+    return array.reduce(function (a, b) {
+        return ( a > b ? a : b );
+      });
 }
 
 exports.avg = function avg (array) {
-  return 0;
+    if(!Array.isArray(array) || array.length === undefined || array[0] === undefined) {
+        return 0;
+    }
+   let sum = array.reduce((acc, item)=> acc+item, 0);
+   return sum/array.length
 }
